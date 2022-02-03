@@ -1,13 +1,1207 @@
-Version: 1.0
+---
+title: "What Does Dollar Do?: D.C. Food Access Today through the Lens of the Dollar Store"
+author: Emma Kornberg
+header-includes:
+    - \usepackage{setspace}\doublespacing
+date: "17 December 2021"
+output: 
+  word_document
 
-RestoreWorkspace: Default
-SaveWorkspace: Default
-AlwaysSaveHistory: Default
+fontsize: 12pt
+---
 
-EnableCodeIndexing: Yes
-UseSpacesForTab: Yes
-NumSpacesForTab: 2
-Encoding: UTF-8
+```{r setup, include=FALSE}
+# Chunk options
+knitr::opts_chunk$set(
+ out.width = "100%"
+)
+```
 
-RnwWeave: Sweave
-LaTeX: pdfLaTeX
+\newpage 
+
+\newline
+
+\newline
+
+\newline
+
+\newline
+
+\newline
+
+"I like to think that dollar stores are really like a microcosm of America. If you can tell me how you relate to a dollar store, I can draw some inferences about where you live, how much money you make, what you may do by your relationship to dollar stores. Some people see them as a way to run in and snag a quick box of Raisinets or Jujubes before a movie without paying five bucks at the theater. Other folks really depend on them to feed their families and sustain themselves.
+
+So the way that we approach dollar stores really is sort of a story of how Americans are getting by during these times, especially as we hopefully make our way out of this pandemic in a really new world that's emerging in terms of our economic stability and mobility here."
+
+\newline
+
+\newline
+
+Brian Vines, reporter for Consumer Reports
+*NPR All Things Considered*: "Dollar stores have boomed during the pandemic, which concerns some communities"
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+
+# Memo
+
+This fall I was beyond excited to participate in the Smith College Smithsonian Internship Program. There, I joined the team at the National Museum of American History in the Division of Cultural and Community Life with curator Steve Velasquez who specializes in immigration studies and food studies. In September, I spoke with Steve about my independent research project, coming to him with a very assorted list of ideas; the only things I knew were that I wanted to write about food and culture, and that I wanted to ground my project in data. As a student of American Studies and of Statistical and Data Sciences, there is not much overlap in the formal coursework, so I was determined to see this possibility through. In 2019, I was an avid listener of *NPR*'s *Planet Money* podcast and had listened to the episode "Dollar Stores Vs. Lettuce" that spoke about the rise of the dollar store and the significance of the locations where they tended to open. While thinking about food access, this subject matter came to mind and thus grew my project, a data-backed extended article. 
+
+Although I am grounding my project in data, I follow the principle that numbers require context. I remain a strong advocate for the fact that the qualitative and the quantitative inform one another and that neither is more important than the other. Catherine D'Ignazio and Lauren Klein write in their book *Data Feminism,* "The bottom line for numbers is that they cannot speak for themselves. In fact, those of us who work with data must actively prevent numbers from speaking for themselves because when those numbers derive from a data setting influenced by differentials of power, or by misaligned collection incentives (read: pretty much all data settings), and especially when the numbers have to do with human beings or their behavior, then they run the risk not only of being arrogantly grandiose and empirically wrong, but also of doing real harm in their reinforcement of an unjust status quo." In this way, my training in American Studies has prepared me for statistically informed projects like this one, arming me with an interdisciplinary tool kit to more complexly understand and discuss aspects of American history and culture. 
+
+My project also asserts the importance of the principles of food justice that affirm that all people deserve accessible, convenient, affordable, nutritional, and delicious food. As the United Nations writes in Article 25 of the Universal Declaration of Human Rights, “Everyone has the right to a standard of living adequate for the health and well-being of himself and of his family, including food, clothing, housing and medical care and necessary social services, and the right to security in the event of unemployment, sickness, disability, widowhood, old age or other lack of livelihood in circumstances beyond his control” (Universal Declaration of Human Rights 1948). This document, while not legally binding, was "proclaimed by the United Nations General Assembly in Paris on 10 December 1948" (Universal Declaration of Human Rights 1948) and set the foundation for global thinking about fundamental human rights. 
+
+Because I will not be able to cover every aspect of the food access injustice, even within the more narrow domain of the D.C. dollar store, I am intentionally choosing to focus on the relationship between D.C. dollar stores and how to best serve the interests of their consumers, particularly those who have been historically and continually excluded from food access. While I would like to more deeply cover topics such labor rights, farm worker and factory worker rights, gender roles in homemaking, limited social benefits for disabled people, the exclusion of undocumented people from federal food benefits, the role of gentrification in removing access to cultural foods in neighborhoods of color, and more, those topics remain outside of the scope of my current writing. Because I will not be able to address these axes of marginalization in depth and give them the treatment that they need and deserve, I have decided that it is better to focus my subject domain specifically on the general consumer rather than claiming that I will be addressing these injustices in only a couple of sentences. This line of thinking follows the fact that while not all food consumers are food workers, all food workers are food consumers. Sociologist Priya Fielding-Singh captures the core of my thinking: “Inequality in America manifests in many ways, but perhaps nowhere more than in how we eat” (Fielding-Singh 2021). 
+  
+  
+# Introduction 
+
+In October 2021, *NPR* podcast *All Things Considered* released an episode entitled “Dollar stores have boomed during the pandemic, which concerns some communities.” They explain, as many other news sources have observed, that dollar stores have grown increasingly popular across the United States during the coronavirus pandemic. According to host Sarah McMammon, “Research suggests 88% of Americans shop at dollar stores at least sometimes. And about 4 in 10 new store openings in the country this year are for dollar stores” (McCammon, et al. 2021). However, McMammon continues, not everyone is thrilled about this development: many people are worried that the proliferation of the dollar store will reduce food access to some neighborhoods, particularly those that are rural, non-white, and/or low-income (McCammon, et al. 2021). This is the general consensus at which many news outlets arrive. As *NPR*’s *Planet Money* podcast host Noel King contends in the episode “Dollar Stores Vs Lettuce,” “[dollar stores] are setting up in places that no one else will go - tiny towns, urban areas. So are they filling a need, or is the dollar store takeover destroying something more valuable?” (King & Gonzalez 2019). However, some contemporary scholars are pushing against this dominant narrative about who eats what in America. Sociologist Priya Fielding-Singh contends in her book *How the Other Half Eats*, released in November 2021, that the story we tell about food in America is often more nuanced than it is often portrayed, explaining that the story is more more deeply rooted in systemic injustice than people would like to think. She writes: “Because of the hidden power of food’s meanings, I learned that improving families’ [physical] access to nutritious food is only the starting point, not the solution, to ensuring nutritional equity. Food access is a necessary but insufficient prerequisite” (Fielding-Singh 2021, 247). 
+
+## Exploration
+
+While I was digging into my project and formulating ideas, I was thinking about what dollar stores meant for consumers' food needs. This meant that my project would inherently be about food access in America. I began thinking about the intentional construction of the "food apartheid" in the United States and the reframe it provides to the more popular narrative of the "food desert." While the land has the capacity to produce more than enough food, the structures that have been put in place that control the food system have baked inequity within. The uneven distribution of food in the United States is not naturally occurring. Although contemporary scholars like Fielding-Singh highlight that the physical element of food access is an incomplete story and that the ability to maintain a well-balanced diet is affected by many larger hidden forces, I will continue to use the broader term "food access" in order to describe an important and everyday product of the deep injustices of the United States. The United States Department of Agriculture (USDA) considers food access to hinge on the following:
+
+* Accessibility to sources of healthy food, as measured by distance to a store or by the number of stores in an area
+* Individual-level resources that may affect accessibility, such as family income or vehicle availability
+* Neighborhood-level indicators of resources, such as the average income of the neighborhood and the availability of public transportation” (USDA 2019) 
+
+Because the ability to consistently be able to eat foods that are nutritious and delicious is such a thorny subject matter, I do find the USDA’s criteria useful in breaking down such vast complexity. I want to highlight that the ability to maintain a well-balanced diet is not only about physical proximity to full-service grocery stores or education about what foods provide the most nutritional value but is also, at its core, about larger integrations and intersections of oppressive systemic forces. Although we have been taught to oversimplify facts such as that one food is inherently "good" while another is "bad" or that imbalanced diets are about misprioritization, it is important to remember that we are not machines and that we are complex beings with complex lives that cannot be squared away into neat packages.
+
+## Scope
+	
+Although I had initially wanted to compare dollar store locations across the continental United States, I decided to narrow my scope to Washington, D.C. This way, I would be able to explore the depth I wanted while remaining within the constraints I had, namely, time. I also developed guiding questions to shape my research, thinking, and writing: 
+
+* Are dollar stores (increasingly becoming) essential businesses in D.C.? What would it mean for DC consumers if this were true? 
+* What is the story behind food access and food store access in D.C.?
+* How might we best serve consumers in D.C., especially those who have historically and continually under-served?
+
+While these questions do not tell the whole story, even that of current D.C. dollar stores, they provide  scaffolding for my exploration and investigation into contemporary food access in D.C. via the dollar store. 
+
+With the onset of the coronavirus pandemic, it became common to discuss what establishments were considered "essential" to daily life and to the function of society (and the economy). Generally speaking, people decided that establishments such as hospitals, fire departments, food retailers, and more were “essential businesses,” while establishments such as concert venues, sports games, and more were deemed “non-essential.” On March 24, 2020, the early stages of the pandemic in the United States, D.C. Mayor Muriel Bowser “[Ordered] Closure of Non-Essential Businesses” to “mitigate the spread of the coronavirus” (Bowser 2020). In this, Mayor Bowser defined food sellers as “essential businesses,” even specifically naming convenience stores and “other establishments engaged in the retail sale, wholesale supply or distribution of food products” and “includes stores that sell groceries and also sell other non-grocery products” (Bowser 2020). Here, Mayor Bowser formally labeled dollar stores that sell food as a city necessity. This seems to be supported by the larger narrative being told about food access in America, that a growing population relies on such non-traditional food sellers. In the journal article “Dollar stores and food deserts,” the authors explain that “SNAP households rely on OSB’s (e.g., convenience stores and dollar stores) for a non-trivial share of their purchases, thereby serving a critical food need among food-assistance recipients” (Chenarides, et al. 2021, 3). Given that “in 2018, forty million Americans participated each month in the federal government’s Supplemental Nutrition Assistance Program, also known as SNAP” (Fielding-Singh 2021, 66), the fact that approximately forty million Americans likely rely on convenience stores and dollar stores is not trivial. Furthermore, with the onset of the coronavirus pandemic and the accompanying number of job losses, it is likely that this number has increased in recent years. 
+
+History is present. In order to understand the food injustice that exists today, we must look back to history, namely that of anti-Black racial oppression. Racial capitalism runs deeply in the veins of the United States. As filmmaker and activist Bree Newsome Bass writes, “The entire system of global wealth creation that is labeled ‘capitalism’ & the global system of anti-Black racism are one and the same” (Newsome Bass 2021). D.C. is a highly segregated city and, due to intentional segregationist policies, the areas west of the Anacostia River tend to be predominantly white in residential population while the areas east of the river tend to have a predominantly Black residential population. This segregation is tangibly mirrored with the number of grocery stores available to residents. In 2016, “nearly 70 percent — or 34 — of the city’s 49 supermarkets were in four wards that are predominantly white and have the District’s highest household incomes, according to the review by D.C. Hunger Solutions, a nonprofit advocacy group” (Schwartzman 2017). In fact, the Smithsonian Anacostia Community Museum’s exhibit “Food for the People: Eating and Activism in Greater Washington” makes the point that D.C. 's Ward 8 “has only one full-service grocery store for over 85,000 residents” (Smithsonian Anacostia Community Museum 2021). It is not a coincidence that the predominantly Black areas of the city have the least amount of food stores, rather it is a product of ongoing racial oppression. As D.C. Hunger Solutions director Beverley Wheeler states, “Grocery-store access is a racial equity issue that must be dealt with, and it’s a health issue… We can no longer pretend we don’t see what we see” (Schwartzman 2017). 
+
+Some argue that because dollar stores are moving into locations that other retailers generally stay away from, these stores are filling a need that had been previously unmet. Yet, even if this is true, this is at best a temporary bandage and not at all a permanent solution. Should dollar stores begin to introduce some produce, they will never be a replacement for a full-service grocery store and, moreover, will definitely never be a replacement for community-driven solutions. This, however, does not change the fact that dollar stores remain key to many Americans’ food lives. “Dollar stores and food deserts” captures this sentiment:
+
+> Our [analysis] results also indicate that dollar stores are not unlike other profit-seeking food retailers in that they are more likely to locate in areas where supermarkets exist and competition is high, suggesting that dollar stores are becoming key players within the food retailing environment (Chenarides, et al. 2021, 21).
+
+Because I am looking specifically at today’s food landscape in D.C., any contemporary, non-historical information I reference will generally be from 2015-2021. This follows the common practice that includes the tail end years of a previous president as well as the years of the presidential administration that has the most recent effect and the beginning of the newest administration. Here, I am capturing the end of the Obama years, the entirety of the Trump years, and the beginning of the Biden years. 
+
+In this data-backed extended article, I will conduct an investigation on contemporary food access in D.C. through the lens of the dollar store. I will examine historical food retail policy and practice in the United States and in the D.C. area specifically, and will analyze and map recent food access data for the city, comparing and contrasting my findings with current thinking on the matter as expressed by journalists and scholars. 
+
+# History
+
+During the Great Depression, President Franklin Roosevelt contended that “the Depression was a national emergency that must be dealt with using federal programs” (Fishback & Thomasson 2006). Thus, during that time, “Many of the federal food policies that we know today -- from food stamps to farm subsidies -- were created” (Smithsonian Anacostia Community Museum). Specifically, the Food Stamp Program began in 1939 as “farmers struggled to sell enough food to keep their farms afloat” and “a large percentage of families found themselves too poor to buy food”; thus, “Food stamps were a government solution developed to address both problems at the same time” (Smithsonian Anacostia Community Museum). However, not all Americans were given access to the programs as “millions of struggling Black families were written out of new federal welfare programs like food stamps” (Smithsonian Anacostia Museum). Thus, during hard times when the government failed to support its people, people like the Black Panther Party (BPP) developed solutions outside of the government. “Food for the People: Eating and Activism in Greater Washington” showcases a 1970 flyer from the DC chapter of the Black Panther Party promoting their Free Breakfast Program for Children that were intended to “help Black children perform well in school, to build relationships with potential supporters, and to highlight gaps in the government’s War on Poverty programs” (Smithsonian Anacostia Community Museum). In response, in 1975, the federal government created the School Breakfast Program with a vested interest in stifling the influence of the Blank Panther Party (Smithsonian Anacostia Community Museum). Federal Bureau of Investigations (FBI) Director J. Edgar Hoover wrote in a 1969 memo to FBI offices “The BCP (Breakfast for Children Program) represents the best and most influential activity going for the BPP and, as such, is potentially the greatest threat to efforts by authorities to neutralize the BPP and destroy what it stands for” (Smithsonian Anacostia Community Museum).
+
+While the Food Stamp program had its early origins in the 1930s, the actual program began in the early 1960s (Fishback & Thomasson 2006) and was intended to “provide low-income households with a means for obtaining an adequate diet by providing them with coupons redeemable for food and for garden seeds and plants” (Fishback & Thomasson 2006). Over the years, the program has been contracted and expanded, depending on the political climate. While this pattern likely will remain, people’s access to food and government benefits should not be subject to the whims of different presidential administrations and congresses. During a zenith of political conservatism in the 1980s, the Food Stamp program and other social benefits received severe cuts that limited the benefits people were able to access (Smithsonian Anacostia Community Museum). In 1981, the Reagan administration slated a one billion dollar cut to the National School Lunch Program, defending the fact that relish could be counted as vegetables in school lunches (Smithsonian Anacostia Community Museum). This, however, was met with great opposition and the USDA ultimately rejected the relish-as-vegetable defense (Smithsonian Anacostia Community Museum). The cuts that were made to food access programs during the Reagan administration coincided with the height of the HIV and AIDS epidemic that left gay men especially vulnerable and the significant uprise in the unhoused population across the nation (Smithsonian Anacostia Community Museum). In turn, many of the food-based non-profit organizations that continue to exist today emerged in D.C. and people took strides to promote collective action for marginalized and vulnerable populations to receive the social benefits of which they had been deprived (Smithsonian Anacostia Community Museum). For example, in the 1980s, the Community for Creative Non-Violence stepped in to serve the people the government was neglecting, and opened D.C. soup kitchens, free clinics, and the like (Smithsonian Anacostia Community Museum). They also called attention to the food waste produced by food sellers who would scrap edible food that had not been sold: “Their work led Congress to pass a resolution in 1982 encouraging grocery stores and wholesalers to donate edible food that would otherwise be discarded” (Smithsonian Anacostia Community Museum). During the rising prosperity of the 1990s, the Clinton administration re-infused many of the social benefit programs. Although slightly counter-intuitive, it makes sense that when there are more funds to go around, people are more able to receive the funds they need. These policies are reflected in the numbers: “The percentage of the population participating in the Food Stamp program rose sharply in the 1970s to more than 9 percent, dipped during the late 1980s, and was above 10 percent in the mid-1990s” (Fishback & Thomasson 2006).
+
+## Historical Data
+
+```{r set up, warning = FALSE, include=FALSE}
+#document set up, opening various packages
+library(tidyverse)
+library(ggplot2)
+library(readxl)
+library(sf)
+library(usethis)
+library(ggthemes)
+library(knitr)
+library(gridExtra)
+```
+
+```{r Historical Statistics, warning = FALSE, include=FALSE}
+#1890-1995 Food programs-participation, benefits, payments, and costs: 1962-1999 -- import data into RStudio (Historical Statistics Database)
+snap <- read_excel("C:\\Users\\ekorn\\Documents\\AMS 412\\SNAP.xlsx")
+wic <- read_excel("C:\\Users\\ekorn\\Documents\\AMS 412\\WIC.xlsx")
+school <- read_excel("C:\\Users\\ekorn\\Documents\\AMS 412\\School_Food.xlsx")
+#Population - United States and outlying areas: 1880-1990 -- import data into RStudio (Historical Statistics Database)
+population <- read_excel("C:\\Users\\ekorn\\Documents\\AMS 412\\population.xlsx")
+
+Food_stamp_participants <- ggplot() +
+  theme_economist() +
+  geom_col(data = snap, aes(x = Year, y = People)) +
+  labs(title = "Food Stamp Program",
+      subtitle = "Average Number of Participants",
+       y = "Number of people (in thousands)",
+       caption = "Graph created by Emma Kornberg;
+       data from Historical Statistics of the United States (Fishback & Thomasson 2006)") +
+  scale_x_discrete(breaks = c(1962, 1970, 1980, 1990, 1998),
+                   labels = c("1962", "1970", "1980", "1990", "1998"))
+
+population_table <- kable(population, caption = "U.S. Total Population from 1960-1990,
+                          data from Historical Statistics of the United States 
+                          (Haines & La Croix 2006)")
+
+Annual_food_stamp_benefits <- ggplot() +
+  theme_economist() +
+  geom_col(data = snap, aes(x = Year, y = Annual)) +
+  labs(title = "Food Stamp Program",
+      subtitle = "Annual average monthly benefit per person",
+       y = "Benefits received (in dollars)",
+       caption = "Graph created by Emma Kornberg;
+       data from Historical Statistics of the United States (Fishback & Thomasson 2006))") +
+  scale_x_discrete(breaks = c(1962, 1970, 1980, 1990, 1998),
+                   labels = c("1962", "1970", "1980", "1990", "1998")) +
+  scale_y_continuous(breaks = c(0.0e+00, 5.0e+06, 1.0e+07, 1.5e+07, 2.0e+07),
+                     labels = c("0", "5m", "10m", "15m", "20m"))
+
+fed_cost_school <- school %>%
+  select(Year, Cost) %>%
+  slice(1:31)
+
+breakfast <- school %>%
+  select(Year, Students, Meals, Percentage) %>%
+  slice(63:93)
+
+fed_cost_graph <- ggplot() +
+  theme_economist() +
+  geom_col(data = fed_cost_school, aes(x = Year, y = Cost)) +
+  labs(y = "Cost",
+       title = "Federal cost of school food programs",
+       subtitle = "Total Costs (in millions of dollars)",
+       caption = "Graph created by Emma Kornberg;
+       data from Historical Statistics of the United States (Fishback & Thomasson 2006)") +
+  scale_x_discrete(breaks = c(1969, 1980, 1990, 1999),
+                   labels = c("1969", "1980", "1990", "1999"))
+
+bf_student_num <- ggplot() +
+  theme_economist() +
+  geom_col(data = breakfast, aes(x = Year, y = Students)) +
+  labs(y = "Participants",
+       title = "School Breakfast Program",
+       subtitle = "Total monthly participation (in millions)",
+       caption = "Graph created by Emma Kornberg;
+       data from Historical Statistics of the United States (Fishback & Thomasson 2006)") +
+  scale_x_discrete(breaks = c(1969, 1980, 1990, 1999),
+                   labels = c("1969", "1980", "1990", "1999"))
+
+bf_meals <- ggplot() +
+  theme_economist() +
+  geom_col(data = breakfast, aes(x = Year, y = Meals)) +
+  labs(y = "Meals",
+       title = "School Breakfast Program",
+       subtitle = "Meals served (in millions)",
+       caption = "Graph created by Emma Kornberg;
+       data from Historical Statistics of the United States (Fishback & Thomasson 2006)") +
+  scale_x_discrete(breaks = c(1969, 1980, 1990, 1999),
+                   labels = c("1969", "1980", "1990", "1999"))
+```
+
+The Food Stamp Program began in the early 1960s. As it picked up, more people began to participate in the program. During the Great Society of the 70s, program participants increased. During the conservatism of the 80s, program participants decreased. During the general prosperity of the 90s, numbers ticked up again. For reference, included is a population table of how many people were counted in the census in each decade mapped on the chart.
+
+```{r food stamp participant graphs, warning = FALSE, echo = FALSE}
+Food_stamp_participants
+population_table
+```
+
+Beneath are the annual average monthly benefits received per person via the Food Stamp Program from 1962-1998. Here, there is generally growth in the positive direction towards more dollar benefits being received. There is noticeable growth during the 1970s Great Society era, a general plateau during the political conservatism of the 1980s, an initial rapid growth in the early 1990s, and a decline in the late 1990s, perhaps due to criticism of President Clinton's social spending as a Democratic president.
+
+```{r food stamp benefit graphs, warning = FALSE, echo = FALSE, fig.height=4}
+Annual_food_stamp_benefits
+```
+
+Over the years between 1960 and 2000, federal spending on provided school meals to children from low-income families has increased across the board. Let us not forget, however, that the population also increased in the United States over this time; the federal government was not exclusively becoming more generous to each child but was accommodating the growing number of American children in schools. Throughout all of the graphs, the general trend is one of growth. It is worth noting the dip across the graphs in spending and meals provided during the 1980s, which corresponds with the deliberate stifling of the Black Panther Party and the rising political conservatism of the time.
+
+```{r school graphs, warning=FALSE, echo= FALSE, fig.height=4}
+fed_cost_graph 
+bf_student_num 
+bf_meals
+```
+
+# Contemporary Data
+
+By understanding the ways that the history of political tension and policy directly affected people's lives, we can better understand how we got to where we are. 
+
+## Dollar Store Case Study: Tulsa, Oklahoma
+
+The dollar store landscape is growing across the United States, no more especially than in Tulsa, Oklahoma. In fact, in the year 2019, it was said that "a brand-new dollar store [would] open up every six hours" and that "There [were] more than 30,000 dollar stores in the United States," that there were more dollar stores "than there [were] Walmarts, McDonald's and CVS stores combined" (King & Gonzalez 2019). The *Planet Money* episode "Dollar Stores Vs Lettuce" focuses on Tulsa as a case study of the larger phenomenon that is occuring across the country. In this episode, the hosts interview Tulsa resident Vanessa Hall-Harper about the observations she is making about the effect of dollar stores in her community. She describes the trend as an eleventh dollar store tries to move into the area: "And they were just popping up, popping up, popping up. And I was saying, this has to have an effect on the ability of a grocery store to come in and be successful" (King & Gonzalez 2019). While dollar stores do not typically sell items like fresh meats and produce, they do tend to offer many food items, such as pasta, canned goods, and packaged snacks. Many of these stores also accept SNAP benefits, which helps to allow low-income Americans to source food from dollar stores. Host Sarah Gonzalez explains, "Dollar stores don't usually sell fruits or vegetables or meat. That is not where the profit is. Grocers say they don't make the real money selling carrots and lettuce. They make the real money selling Twinkies and Cheetos and, like, paper towels. And dollar stores - they really only sell those high-profit items" (King & Gonzalez 2019). 
+
+Generally, people talk about fresh foods like fruits and vegetables as being more expensive than packaged snacks, so, at first glance, it seems counter-intuitive that sellers do not profit off of the carrots and the lettuce. However, once you consider all of the hidden costs that are a part of selling produce, it begins to make sense. A large reason for this, Gonzalez explains, is that "dollar stores ... employ fewer people [than traditional grocery stores do]. If you don't need someone making sure the chicken didn't go bad or the tomatoes aren't all shriveled up, you can operate with much leaner staff. On average, dollar stores employ nine people when local grocery stores employ 14" (King & Gonzalez 2019). Furthermore, dollar stores typically can sell more items and make more money per square foot of their spaces than traditional grocery stores can. When they only carry big-ticket items that do not expire and can be easily stacked together, the advantage that dollar stores have over other food sellers becomes more apparent. This advantage only becomes amplified when the dollar store is part of a large chain that can source specially sized brand-name items that smaller, more local food sellers cannot access, thereby out pricing the smaller sellers and building a monopoly that potentially undercuts any future businesses in the area. 
+
+Gonzalez and King walk through the story of Doug Nech, a small grocery store owner in a small town outside of Tulsa, and how the arrival of a new large dollar store chain down the road from his store immediately affected his sales. He recalls: "I'd look at their prices. And I happened to notice one day that they were selling a 14 1/2-ounce can of Campbell's Chicken Noodle soup, name-brand soup, for a dollar. So I come back down here, and I call my warehouse [about the fact that my soup cans] From my supplier, freight delivered to the store here, [cost] about a dollar-fifty. And mine's only 11 1/2 ounces. He called his Campbell's soup representative and asked him, why is this? He said, well, we only make it for them. And we only make it in a 14 1/2-ounce can...Specifically for Dollar General" (King and Gonzalez 2019). Despite the fact that seventy percent of the town's residents specifically chose to continue bringing their business to Doug's store, he was still losing nearly a third of his business and could not compete. While the store was still providing community value, losing thirty percent of its business meant that the store was ultimately forced to close doors (King and Gonzalez 2019). 
+
+Hearing Doug's story, Hall-Harper became further motivated to encourage her city council to block the opening of the eleventh dollar store in her town. After all, she reasoned, the potential harms to existing local retailers that an eleventh dollar store might bring negatively outweighed the potential benefits to residents it could bring. The harm would be greater than the benefit. However, the city council remained highly reluctant to discourage business in their town; Hall-Harper would need more and stronger evidence to support her case. During this time, a large grocery store chain approached Hall-Harper, expressing that they were interested in opening a location in her town but that they were concerned about the market. They sent her a letter that read: "While we welcome healthy competition, it is our opinion that a market oversaturated with small convenience-type dollar stores would negatively affect Honor Capital's ability to add future stores throughout Tulsa's underserved grocery communities" (King and Gonzalez 2019). In response, Hall-Harper began conducting policy research to see if there would be a way to prevent further oversaturation of the market and comes across the story of a wealthy city in Southern California that established formula business restrictions to regulate the number of chain stores that could operate in the area at a time. She brought this idea to her local government and gathered public support for the implementation of legal measures that would prevent expansion of the growth of the dollar store landscape in the area, as well as reduce the number of required parking spaces for a grocery store to have and ease the permitting that allows community garden sellers to sell produce out of their gardens (King and Gonzalez 2019). Gonzalez explains, what "north Tulsa did is make room in the market for a grocery store. They are trying to prop up a business that hasn't worked in the free market. But north Tulsa is still a market. In order for a grocery store to survive, it will have to be better than the 11 dollar stores" (King and Gonzalez 2019). As a result of Hall-Harper and her community's extensive organizing efforts, north Tulsa was finally able to welcome a grocery store and make space for, as Hall-Harper says, "quality groceries in [the] community" (King and Gonzalez 2019). 
+
+
+
+## Data Background
+
+While the dollar store landscape swept over Tulsa in one way, the story is not necessarily the same in D.C. Although Tulsa and D.C. are not the same places, there is value in 
+
+In order to better understand the D.C. environment by demographics, we will look at "the data." With this, I specifically searched for open access data than any policy researcher, politician, and member of the general public would be able to work with. In many cases, it seems that larger cities, states, and the federal government have separate data work. However, with D.C., a non-state, I was to rely solely on federal level data. When determining a date range for the data I would be looking at, I found that any demographic data-driven policy that has impacted the D.C. food access landscape as it is now would have been looking at 2010 census data. Although I am looking at the 2021 D.C. dollar store landscape, the data for the 2020 census would not have yet been out for policies that affect the current environment. I would be interested to see predictions of the same demographic measures in the aftermath of the pandemic. The 2010 Census was taken in the context of two years out from the Great Recession of 2008 during a Democratic presidential administration. The 2020 Census was taken during a crisis, rather in the recovery from a crisis, during a peaking rhetoric of xenophobia against undocumented Americans, and therefore increases the incongruence in comparison between the two. 
+
+After searching through different government entities for data resources, I decided to work primarily with the USDA Economic Research Service's (ERS) 2019 Food Access Atlas. This atlas contained demographic data for every state and American territory by census tract, gathering information from the 2010 census, the 2014-18 American Community Survey, as well as 2015 and 2019 store data (Food Access Atlas 2019). In fact, the ERS employed the same Trade Dimensions TDLinx proprietary data source on individual supermarket store listings that the Chenarides, et al. study investigated. I only looked at the USDA's Food Access Atlas and not the TDLinx data set in part because the USDA already included data from TDLinx and in part because it did not appear to be an open access set. The ERS then manipulated the data they collected to fill in variables that were specifically of interest to them. For example, they created an operational definition for "low-income tract" and then manipulated the data based on their definition to produce columns that would be useful for their purposes. The USDA also has a Food Environment Atlas that I considered examining; however, because it focused less on food sellers and food access and more on food choices and health, I opted to set this second atlas aside for this project.
+
+In order to create visualizations of the USDA Food Access Atlas data, I found a map file for D.C. census tracts that created the tract outline map for me via the United States Census Bureau. However, when people generally talk about D.C. demographics and inequality, they generally refer to locations by their ward grouping. I had initially believed that the ward groupings and census tracts would be compatible with each other and that there would be an existing list of which tracts were part of which wards that would be easy to pull. However, this was not the case. I spent quite an extensive amount of time searching for logic and patterns behind the ward organization that would be compatible with the census tract organization with very minimal success. After finally finding a map through the D.C. Office of Planning that generally organized census tracts into wards, I spent even more time trying to manually create a list version of the map until I realized that this planned element of my project was not meant to be. Far too many times did I find census tracts that were in more than one ward and did I find tracts that did not match up with the list of tracts I had from the USDA Food Access Atlas. While I wanted to be able to categorize the tracts and be able to present the Food Access Atlas data on a ward map, I ultimately decided to present the data on an unfortunately less user-friendly tract map with labels of where each ward is.
+
+```{r USDAFoodAccessAtlas, warning=FALSE, message=FALSE, include=FALSE}
+#2019 USDA FOOD ACCESS ATLAS -- import data into RStudio (https://www.ers.usda.gov/data-products/food-access-research-atlas/download-the-data/)
+FoodAccess_2019 <- read_excel("C:\\Users\\ekorn\\Documents\\AMS 412\\FoodAccess_2019.xlsx")
+
+#LI = Low income, LA = low access
+#commented out and excluded variables are majority null/redundant
+DC_FA_19 <- FoodAccess_2019 %>%
+  mutate(TractPOC = TractBlack + TractAsian + TractNHOPI + TractAIAN + TractOMultir
+         + TractHispanic) %>%
+  select(CensusTract, Pop2010,
+         #LILA tracts measured at 1 mi and 1/2 mi
+         LILATracts_1And10, LILATracts_halfAnd10,
+         #LILA tracts using vehicle access or LILA tract measured at 20 mi;
+         #Vehicle access, tract with low vehicle access
+         LILATracts_Vehicle, HUNVFlag,
+         #LI tract; tract poverty rate
+         LowIncomeTracts, PovertyRate,
+         #Tract median family income
+         MedianFamilyIncome,
+         #LA tracts measured at 1/2, 1, 10, and 20 mi
+         LATracts_half, LATracts1, LATracts10, LATracts20,
+         #LA tract using vehicle access
+         LATractsVehicle_20,
+         #LA population at 1/2, 10, and 20 mi, number + share
+         lapophalf, lapophalfshare, #lapop10, lapop10share, lapop20, lapop20share,
+         #LILA population at 1/2, 10, and 20 mi, number + share
+         lalowihalf, lalowihalfshare, #lalowi10, lalowi10share, lalowi20, lalowi20share,
+         #Tract low-income population, number
+         TractLOWI,
+         #LA, children age 0-17 at 1/2, 1, 10, and 20 mi, number + share
+         lakidshalf, lakidshalfshare, #lakids1, lakids1share, lakids10, lakids10share,
+         #lakids20, lakids20share,
+         #Tract children age 0-17, number
+         TractKids,
+         #LA, seniors age 65+ at 1/2, 1, 10, and 20 mi, number + share
+         laseniorshalf, laseniorshalfshare, #laseniors1, laseniors1share, laseniors10,
+         #laseniors10share, laseniors20, laseniors20share,
+         #Tract seniors age 65+, number
+         TractSeniors,
+         #LA, White population at 1/2, 1, 10, and 20 mi, number + share
+         lawhitehalf, lawhitehalfshare, #lawhite1, lawhite1share, lawhite10, lawhite10share,
+         #lawhite20, lawhite20share,
+         #Tract White population, number
+         TractWhite,
+         #LA, Black or African American population at 1/2, 1, 10, and 20 mi, number + share
+         lablackhalf, lablackhalfshare, #lablack1, lablack1share, lablack10, lablack10share,
+         #lablack20, lablack20share,
+         #Tract Black or African American population, number
+         TractBlack,
+         #LA, Asian population at 1/2, 1, 10, and 20 mi, number + share
+         laasianhalf, laasianhalfshare, #laasian1, laasian1share, laasian10, laasian10share,
+         #laasian20, laasian20share,
+         #Tract Asian population, number
+         TractAsian,
+         #LA, Native Hawaiian or Other Pacific Islander population
+         #at 1/2, 1, 10, and 20 mi, number + share
+         lanhopihalf, lanhopihalfshare, #lanhopi1, lanhopi1share, lahopi10share,
+         #lahopi20, lahopi20share,
+         #Tract Native Hawaiian and Other Pacific Islander population, number
+         TractNHOPI,
+         #LA, American Indian or Alaska Native population at 1/2, 1, 10, and 20 mi, number + share
+         laaianhalf, laaianhalfshare, #laaian1, laaian1share, laaian10, laaian10share,
+         #laaian20, laaian20share,
+         #Tract American Indian and Alaska Native population, number
+         TractAIAN,
+         #LA, Other/Multiple race population at 1/2, 1, 10, and 20 mi, number + share
+         laomultirhalf, laomultirhalfshare, #laomultir1, laomultir1share, laomultir10,
+         #laomultir10share, laomultir20, laomultir20share,
+         #Tract Other/Multiple race population, number
+         TractOMultir,
+         #LA, Hispanic or Latino population at 1/2, 1, 10, and 20 mi, number + share
+         lahisphalf, lahisphalfshare, #lahisp1, lahisp1share, lahisp10, lahisp10share,
+         #lahisp20, lahisp20share,
+         #Tract Hispanic or Latino population, number
+         TractHispanic,
+         #Vehicle access, housing units without and LA at 1/2, 1, 10, and 20 mi, number + share
+         lahunvhalf, lahunvhalfshare, #lahunv1, lahunv1share, lahunv10, lahunv10share,
+         #lahunv20, lahunv20share,
+         #Tract housing units without a vehicle, number
+         TractHUNV,
+         #LA, housing units receiving SNAP benefits at 1/2, 1, 10, and 20 mi, number + share
+         lasnaphalf, lasnaphalfshare, #lasnap1, lasnap1share, lasnap10, lasnap10share, lasnap20,
+         #lasnap20share,
+         #Tract housing units receiving SNAP benefits, number
+         TractSNAP,
+         #LA, population at 1 mi, number + share
+         #lapop1, lapop1share,
+         #LILA population at 1 mi, number + share
+         #lalowi1, lalowi1share
+         TractPOC)
+```
+
+```{r shapefiles, warning=FALSE, message=FALSE, include=FALSE}
+#DC CENSUS TRACT MAP
+tract <- fs::path("C:\\Users\\ekorn\\Documents\\AMS 412\\tl_2021_11_tract")
+#st_layers(tract)
+DC_tract <- st_read(tract, layer = "tl_2021_11_tract")
+
+#DC WARD MAP
+DC_wards <- fs::path("C:\\Users\\ekorn\\Documents\\AMS 412\\Wards_from_2012_with_Census_2020\\Wards_from_2012_with_Census_2020.shp")
+#st_layers(DC_wards)
+wards <- st_read(DC_wards, layer = "Wards_from_2012_with_Census_2020")
+
+
+#SNAP21
+snap_stores <- fs::path("C:\\Users\\ekorn\\Documents\\AMS 412\\SNAP_Store_Locations\\Store_Locations.shp")
+#st_layers(snap_stores)
+snap_stores <- st_read(snap_stores, layer = "Store_Locations")
+
+
+#DC 2021 DOLLAR STORES MAP
+#Google Maps My Maps feature used to create preliminary map of DC dollar stores: https://www.google.com/maps/d/edit?mid=1l9Blpau92-0YAVNsqLEyqAEZkcVnlY3B&usp=sharing 
+
+#Excel file of DC dollar store coordinates:
+DC_Dollar_Stores_2021 <- read_excel("C:\\Users\\ekorn\\Documents\\AMS 412\\DC_Dollar_Stores.xlsx")
+DC_Dollar_Stores_2021 <- fs::path("C:\\Users\\ekorn\\Documents\\AMS 412\\DC DS ArcGIS\\T_2021_DC_DS__XYTableToPoint1.shp")
+#st_layers(DC_Dollar_Stores_2021)
+DC_DS <- st_read(DC_Dollar_Stores_2021, layer = "T_2021_DC_DS__XYTableToPoint1")
+```
+
+```{r USDA maps, warning=FALSE, include=FALSE}
+#join USDA Food Access Atlas with Census Tract Map for visualizations
+tracts_data <- DC_tract %>% 
+  full_join(DC_FA_19, by = c("GEOID" = "CensusTract")) 
+
+#Population
+pop2010_map <- ggplot() +
+  theme_economist() +
+  scale_fill_distiller(palette = "Blues",
+                       direction = 1) +
+  geom_sf(data = tracts_data, aes(fill = Pop2010)) +
+  labs(title = "D.C. Population",
+       subtitle = "by 2010 census tracts",
+       caption = "Map created by Emma Kornberg;
+       data from USDA (“Food Access Research Atlas.”)") +
+  theme(legend.key.size = unit(1, 'cm')) +
+  geom_sf_label(data = wards, aes(label = NAME),
+                label.padding = unit(1, "mm")) +
+  theme(aspect.ratio = 5/5)
+
+#Poverty Rate
+pov_rate_map <- ggplot() +
+  theme_economist() +
+  scale_fill_distiller(palette = "Blues",
+                       direction = 1) +
+  geom_sf(data = tracts_data, aes(fill = PovertyRate)) +
+  labs(title = "D.C. Poverty Rate",
+       subtitle = "by 2010 census tracts",
+       caption = "Map created by Emma Kornberg;
+       data from USDA (“Food Access Research Atlas.”)") +
+  theme(legend.key.size = unit(1, 'cm')) +
+  geom_sf_label(data = wards, aes(label = NAME),
+                label.padding = unit(1, "mm")) +
+  theme(aspect.ratio = 5/5)
+
+#White by tract
+white_tract_map <- ggplot() +
+  theme_economist() +
+  scale_fill_distiller(palette = "Blues",
+                       direction = 1) +
+  geom_sf(data = tracts_data, aes(fill = TractWhite)) +
+  labs(title = "D.C. White Population",
+       subtitle = "by 2010 census tracts",
+       caption = "Map created by Emma Kornberg;
+       data from USDA (“Food Access Research Atlas.”)") +
+  theme(legend.key.size = unit(1.5, 'cm')) +
+  geom_sf_label(data = wards, aes(label = NAME),
+                label.padding = unit(1, "mm")) +
+  theme(aspect.ratio = 5/5)
+
+#POC by tract
+poc_tract_map <- ggplot() +
+  theme_economist() +
+  scale_fill_distiller(palette = "Blues",
+                       direction = 1) +
+  geom_sf(data = tracts_data, aes(fill = TractPOC)) +
+  labs(title = "D.C. Non-white Population",
+       subtitle = "by 2010 census tracts",
+       caption = "Map created by Emma Kornberg;
+       data from USDA (“Food Access Research Atlas.”)") +
+  theme(legend.key.size = unit(1.5, 'cm')) +
+  geom_sf_label(data = wards, aes(label = NAME),
+                label.padding = unit(1, "mm")) +
+  theme(aspect.ratio = 5/5)
+
+#Black by tract
+black_tract_map <- ggplot() +
+  theme_economist() +
+  scale_fill_distiller(palette = "Blues",
+                       direction = 1) +
+  geom_sf(data = tracts_data, aes(fill = TractBlack)) +
+  labs(title = "D.C. Black Population",
+       subtitle = "by 2010 census tracts",
+       caption = "Map created by Emma Kornberg;
+       data from USDA (“Food Access Research Atlas.”)") +
+  theme(legend.key.size = unit(1.5, 'cm')) +
+  geom_sf_label(data = wards, aes(label = NAME),
+                label.padding = unit(1, "mm")) +
+  theme(aspect.ratio = 5/5)
+
+#SNAP
+snap_map <- ggplot() +
+  theme_economist() +
+  scale_fill_distiller(palette = "Blues",
+                       direction = 1) +
+  geom_sf(data = tracts_data, aes(fill = TractSNAP)) +
+  labs(title = "D.C. Housing Units with SNAP Benefits",
+       subtitle = "from 2019 Store Tracking and Redemption System (STARS) store directory;
+       organized by 2010 census tracts",
+       caption = "Map created by Emma Kornberg;
+       data from USDA (“Food Access Research Atlas.”)") +
+  theme(legend.key.size = unit(1.5, 'cm')) +
+  geom_sf_label(data = wards, aes(label = NAME),
+                label.padding = unit(1, "mm")) +
+  theme(aspect.ratio = 5/5)
+
+#LI
+li_map <- ggplot() +
+  theme_economist() +
+  scale_fill_distiller(palette = "Blues",
+                       direction = 1) +
+  geom_sf(data = tracts_data, aes(fill = LowIncomeTracts)) +
+  labs(title = "Flag for Low-Income Tracts in D.C.",
+       subtitle = "from the Department of Treasury’s
+       New Markets Tax Credit (NMTC) program;
+      organized by 2010 census tracts",
+       caption = "Map created by Emma Kornberg;
+       data from USDA (“Food Access Research Atlas.”)") +
+  theme(legend.key.size = unit(1.5, 'cm')) +
+  geom_sf_label(data = wards, aes(label = NAME),
+                label.padding = unit(1, "mm")) +
+  theme(legend.position = "none") +
+  theme(aspect.ratio = 5/5)
+
+#LA
+la_map <- ggplot() +
+  theme_economist() +
+  scale_fill_distiller(palette = "Blues",
+                       direction = 1) +
+  geom_sf(data = tracts_data, aes(fill = LATracts_half)) +
+  labs(title = "Flag for Low-Access Tracts in D.C.",
+       subtitle = "Many residents live 1/2 mi. + from the nearest supermarket;
+       from 2019 Store Tracking and Redemption System (STARS)
+       store directory of SNAP authorized sellers and
+       2019 Trade Dimensions TDLinx store directory",
+       caption = "Map created by Emma Kornberg;
+       data from USDA (“Food Access Research Atlas.”)") +
+  theme(legend.key.size = unit(1.5, 'cm')) +
+  geom_sf_label(data = wards, aes(label = NAME),
+                label.padding = unit(1, "mm")) +
+  theme(legend.position = "none") +
+  theme(aspect.ratio = 5/5)
+
+#LILA tracts measured at 1/2 mi
+
+lila_map <- ggplot() +
+  theme_economist() +
+  scale_fill_distiller(palette = "Blues",
+                       direction = 1) +
+  geom_sf(data = tracts_data, aes(fill = LILATracts_halfAnd10)) +
+  labs(title = "Flag for Low-Income, Low-Access Tracts in D.C.", 
+       subtitle = "when considering low accessibilty at 1/2 mi; 
+       from 2019 Store Tracking and Redemption System (STARS)
+       store directory of SNAP authorized sellers and
+       2019 Trade Dimensions TDLinx store directory",
+       caption = "Map created by Emma Kornberg;
+       data from USDA (“Food Access Research Atlas.”)") +
+  theme(legend.key.size = unit(1, 'cm')) +
+  geom_sf_label(data = wards, aes(label = NAME),
+                label.padding = unit(1, "mm")) +
+  theme(legend.position = "none") +
+  theme(aspect.ratio = 5/5)
+
+#SNAP Locations
+SNAP_store_map <- ggplot() +
+  theme_economist() +
+  geom_sf(data = wards) +
+  geom_sf(data = snap_stores) +
+  labs(title = "SNAP Store Locations in D.C. in 2021", 
+       caption = "Map created by Emma Kornberg;
+       data from USDA (“Where Can I Use SNAP EBT?.”)") +
+  theme(legend.key.size = unit(1, 'cm')) +
+  geom_sf_label(data = wards, aes(label = NAME),
+                label.padding = unit(1, "mm")) +
+  theme(legend.position = "none") +
+  theme(aspect.ratio = 5/5)
+```
+
+
+## Data Visualizations
+
+While I could present numerous visualizations of the USDA Food Access Atlas data, that would be counter-intuitive to the data storytelling format I am endeavoring to follow. Rather than throw as many visualizations up as possible, it would be far more useful for me to present a curated selection of maps that help illustrate my points. I would have liked to present more visualizations side by side; however, due to the nature of the visual map layout, there would not be enough space for this design. I considered presenting the data in an alternative form but decided against doing so due to the census tract organization of the data. Because census tracts have very little tangible meaning to the general reader, presenting the data simply by census tract without map or ward context would not be user-friendly. If I had been able to successfully organize the data by ward, I might have been more compelled to present additional data. 
+
+### D.C. Population 
+
+First, we begin with a map of the D.C. population. This map helps us understand the population distribution of the area. We can see that the residential areas of the city are fairly evenly populated with concentrated with some areas more dense than others. This map is useful to keep in mind so that when we look at the distribution of other variables, such as poverty or grocery stores, we understand that population is not significantly skewing them. 
+
+```{r population map, warning = FALSE, message = FALSE, echo = FALSE}
+pop2010_map
+```
+
+### D.C. Poverty Rate Shares
+
+Now, we will begin to look more specifically at city demographics. We notice that north D.C.and west D.C. have the lowest poverty rates, their share generally below twenty percent, while east and especially south D.C. have the highest poverty rates with shares as high as sixty percent. It is worth noting that the area east of the Anacostia River, wards 7 and 8, is known to have a predominantly Black population and to have been historically and continually under-served. It is not a coincidence that the poverty rate is higher in this area of the city.
+
+```{r poverty map, warning = FALSE, message = FALSE, echo=FALSE}
+#grid.arrange(black_tract_map, snap_map, ncol = 2) 
+pov_rate_map
+```
+
+### D.C. Racial Demographics 
+
+The undercurrent of racial capitalism runs deeply throughout American history and society. Scholar Ruth Wilson Gilmore defines racism as "state-sanctioned or extralegal production and exploitation of group-differentiated vulnerability to premature death" (Leigh Goffe 2020). Through this definition, we can better understand the real and intentional consequences of racism as we connect food access inequality in D.C. to systemic racism. It also reminds us that racism was created and is not an innate fact of human life. Anti-Blackness is deeply rooted in American history and policy, and strives to undercut Black Americans and detrimentally risk their lives in order to excessively benefit white Americans. We cannot address food injustice without addressing racial injustice. 
+
+Food is a necessary part of life needed for sustenance and survival. Food also plays a significant role in the pursuit of happiness. All people are deserving of access to nutritional and delicious food that complete their lives. Food injustice and racism are public health concerns that require intervention. Wilson Gilmore continues, "The racial in racial capitalism isn't secondary, nor did it originate in color or intercontinental conflict, but rather always group-differentiation to premature death. Capitalism requires inequality, and racism enshrines it" (Wilson Gilmore).
+
+D.C. has been a historically and continually segregated city. When we examine the maps of where white people and Black people live in D.C., we see that these maps are very similar. One could almost interchangeably swap the title for a racial demographics map with a title that describes the poverty inequality, the mortality inequality, and so on, in the city. 
+
+First, I display a map of the white population in D.C., illustrating how segregated the city remains today. Very few white people live in the eastern portion of the area. Then, I provide a map of the composite population of people of color. It is important to remember that race is not solely Black and white in America; though we keep in mind that many of the policies and treatments of non-Black people of color in the United States stem from anti-Blackness. Here, we still see that D.C. is a highly segregated city and remind ourselves that this is not purely coincidental; rather, it was deliberate. While the label "people of color" serves as a method to capture the shared experiences of people affected by similar places of "group-differentiation to premature death" (Wilson Gilmore), we must caution against data aggregation that obscures the most extreme injustice against the most marginalized people. Thus, we continue with a map of the Black population in D.C. and see a much more extreme depiction of segregation. 
+
+Lastly, we note that the information about racial demographics in D.C. is sourced from the 2010 census. While the 2010 census demographics data is often used in assessing the state of affairs in an area and determining policy for the area, we must remember that "those numbers don't tell the whole story" (Lo Wang, et al. 2021). Racial categories are, again, social constructs and do not accommodate the lived experience of many people. Furthermore, the data presented in the Food Research Access Atlas processes multiracial ethnicities by aggregating the entire population, which does not account for a variety of additional variables that affect the different life experience of different multiracial people. While the 2010 census demographic data is useful for us to examine the context of and the connection between racial injustice and food injustice in the area, it is not an all-knowing or objective measure. Human-created measures are subject to human-created error and fallacy.
+
+
+```{r race demographics map, warning = FALSE, message = FALSE, echo=FALSE}
+#grid.arrange(black_tract_map, snap_map, ncol = 2) 
+white_tract_map
+poc_tract_map
+black_tract_map
+```
+
+### D.C. Low Income and Low Access Flags
+
+Let us now examine the low-income and low-access mappings of the city. We first look at the low income, low access measure of food insecurity as defined by the USDA: tracts where a large proportion of "low-income individuals living more than one-half mile ... from the nearest supermarket, super[-]center, or large grocery store in a tract" where "Low income is defined as annual family income at or below 200 percent of the Federal poverty threshold for family size" (Food Access Research Atlas). Here, we notice that the low-income, low-access population is concentrated in the south and the east portions of the D.C., particularly in wards 7 and 8, the predominantly Black areas of the city. As an urban area, it is likely that many residents do not keep cars, meaning that they must travel to and from the grocery store either by foot or public transportation. If you are feeding a family, it is a demanding task to carry back a full-load of groceries for the week. This can make bulk purchasing, often a time and cost saving measure, difficult. Systemic barriers make poverty both time and cost inefficient. It is therefore highly understandable why one might choose to make food purchases from convenience stores and dollar stores, especially when they accept SNAP benefits. When time is a valuable resource, one might choose to walk down the street and obtain similar items, rather than to spend time and money in transportation fares for food shopping. However, while dollar stores offer the illusion of a good value, this is not always the case. Often, big dollar store chains are able to order their stock in bulk from their suppliers, meaning that they can obtain special portions of food items that other stores may not have access to (King and Gonzalez 2019). While a small grocery store might sell a standard size of a canned good, a dollar store chain can sell the item in a smaller size at a lower price, thus providing convenience and sometimes the illusion of a better deal. 
+
+The USDA Food Access Atlas also offers other distances from grocery stores in their measurements of lack of food access, which accommodates differences in locations. Since the Food Access Atlas serves the entire United States, the measures they use must make sense for differing locations. While one might not expect residents of a rural area to live within one mile of a grocery store, one would generally expect it of a more metro area. In the former, one would expect that people are more likely to have cars than people in metro areas where it can be highly costly to own a car. Because we are only looking at a metro area, I decided to focus on the half mile measure between residential areas and food sellers, a reasonable walking distance. In D.C., the metro baseline cost is two dollars, which, given that one would be traveling in both directions, means a trip longer than a mile would generally involve spending at least four dollars, nearly a third of the hourly minimum wage. Furthermore, in wards 7 and 8, the wards with the highest poverty rate, the metro access is more limited than in some of the other wards, meaning that even if more food sellers opened in the area, residents would likely still need to walk to their destinations. Access to increased leisure time has become a luxury when opportunity cost dictates that one could be making upwards of fifteen dollars during the time they are food shopping. 
+
+When we hold the low-income, low-access map in comparison with the D.C. poverty rate map, we notice similarities in trends. This makes sense as places that are considered to be low-income would likely have a higher poverty rate. The combined low-income, low-access map is a helpful way for us to understand the segregation practices and shows us the intersection where concentrations of residents are both low-income and far from grocery stores. However, it is also helpful to look at the separate low-income and low-access maps because they show that the variables are not one and the same. While the disparity continues to be more extreme in the south and east regions of the city, we notice that some places are low-access and not low-income and that some are low-income and not low-access. We keep this in mind when we bring this in comparison with the most recent scholarly thought. 
+
+```{r lila maps, warning = FALSE, message = FALSE, echo=FALSE}
+lila_map
+li_map
+la_map
+```
+
+
+### D.C. SNAP Benefits Distribution
+
+```{r snap sellers, warning = FALSE, message = FALSE, include=FALSE}
+snap_stores %>%
+  arrange(Store_Name)
+
+snap_pop_sellers <- snap_stores %>%
+  mutate(seller = case_when(
+    grepl("CVS", Store_Name) ~ 'CVS',
+    grepl("eleven", Store_Name) ~ 'SevenEleven',
+    grepl("Giant", Store_Name) ~ 'Giant',
+    grepl("Safeway", Store_Name) ~ 'Safeway',
+    grepl("Trader", Store_Name) ~ 'TraderJoes',
+    grepl("Harris", Store_Name) ~ 'HarrisTeeter',
+    grepl("Wawa", Store_Name) ~ 'Wawa',
+    grepl("Dollar", Store_Name) ~ 'AllDollarStores',
+    grepl("Walmart", Store_Name) ~ 'Walmart',
+    grepl("Walgreens", Store_Name) ~ 'Walgreens',
+    grepl("Target", Store_Name) ~ 'Target'))
+
+snap_pop_sellers %>%
+  filter(!is.na(seller))
+
+pop_snap_map <- ggplot() +
+  theme_economist() +
+  geom_sf(data = wards) +
+  geom_sf(data = snap_pop_sellers, aes(color = seller)) +
+  labs(title = "Popular 2021 SNAP-Authorized Food Sellers in D.C.",
+       caption = "Map created by Emma Kornberg;
+       data from USDA (USDA Food and Nutrition Service.)") +
+  theme(legend.position="right") +
+  geom_sf_label(data = wards, aes(label = NAME),
+                label.padding = unit(1, "mm")) +
+  scale_color_discrete(drop = FALSE,
+                       name = 'Popular Stores',
+                       label = c('CVS', 'Giant', 'Harris Teeter',
+                              'Safeway','Target', 'Trader Joes',
+                              'Walgreens','Walmart', 'Wawa',
+                              '7/11', 'Other Stores')) +
+  theme(aspect.ratio = 5/5)
+```
+
+Lastly, as we look at the Food Access Atlas, we look at SNAP data, data from the Supplemental Nutritional Assistance Program that is run through the federal government's USDA. The maps we look at here are (1) where the SNAP benefits recipients are located in D.C., (2) where the SNAP retailers are located in the city, and (3) who some of these sellers are. In the first map, we see that, in 2019, wards 7 and 8 are where the highest number of housing units receive SNAP benefits. These wards, the predominantly Black wards of the city, are time and again systemically segregated -- they remain "separate" but surely not "equal." This is likely further exacerbated by the onset of the pandemic that intensified the wealth inequality in the country. While residents in these wards now have access to SNAP benefits, let us not forget our history that explicitly excluded Black Americans from receiving these benefits and that our present continues to explicitly exclude undocumented Americans who are currently wholly unable to access these benefits. 
+
+Now, we pivot from the Food Access Atlas to SNAP-specific data, both of which are shared to the public by the USDA. Because the former does not contain data about the SNAP program beyond where SNAP recipients are located, we look to more  program specific resources. Given that approximately forty million Americans relied on SNAP benefits in 2018 (Fielding-Singh 2021, 66), it is important that we further explore this area in our food access investigation. The second map we look at shows us where stores that accept SNAP benefits are located in the city. We notice that wards 3 and 4 of the western portion of D.C. have the fewest number of stores that accept SNAP. We remember that these wards were flagged in our low-access map for residents not being able to access a large food retailer within a half mile radius. However, these same wards were also marked with having the lowest poverty rate in the city. Therefore, there is some sense to the fact that fewer sellers in the area need to accept SNAP benefits in order to generate revenue. Ward 1 appears to be the most densely populated with SNAP stores, even though its residents have a relatively low need level and, as we saw earlier, has a relatively low poverty rate. Let us make note of this observation.
+
+While we cannot label every single store on our second map, we can highlight the popular stores in the third map. Here, I have created a color-coded legend that displays the popular chain stores on the map. There are as many points on this map as there are in the second map but the points that denote popular chain stores like Safeway are emphasized. When different food sellers take on different audiences, their locations are of note. In colloquial conversation, people often talk about stores like Whole Foods and Trader Joe's as markers of gentrification and wealth. This is because these food sellers cater to wealthier audiences. Fielding-Singh explains: "Whole Foods was the supermarket that came up the most in my conversations with mothers. It’s more than a grocery storev -- it’s really a signifier of a certain diet, lifestyle and social class" (A.O.L. Staff 2021). Even though Whole Foods might sell items that are similar to those sold in other grocery stores, because of the store's branding that signifies affluence and health, their foods are often perceived as "better" than similar foods from other sellers. Physical proximity to convenience and quality, be it inflated or not, often represents higher socio-economic standing and financial quality of life. We notice that the stores that accept SNAP benefits in wards 7 and 8 do not tend to be the same popular stores that are located in other wards. While store popularity is not a stand-in for quality, we know that where name-brand stores choose their locations is strongly influenced by where they can best meet their target audience and where they believe they can make the most profit. The fact that these stores do not have faith in these areas of the city is not meaningless. Not only are there fewer name-brand SNAP-authorized stores in wards 7 and 8 but there are also fewer stores in those locations in general. 
+
+```{r snap maps, warning = FALSE, message = FALSE, echo=FALSE}
+snap_map
+SNAP_store_map
+pop_snap_map
+```
+
+## D.C. Dollar Stores
+
+```{r dollar stores, warning = FALSE, message = FALSE, echo=FALSE}
+DC_DS_grouped <- DC_DS %>%
+  mutate(seller = case_when(
+    grepl("Plus", store) ~ 'Dollar Plus',
+    grepl("1", store) ~ 'Dollar 1',
+    grepl("Tree", store) ~ 'Dollar Tree',
+    grepl("Star", store) ~ 'Dollar Star',
+    grepl("Beyond", store) ~ 'Dollar & Beyond',
+    grepl("Family", store) ~ 'Family Dollar',
+    grepl("Five", store) ~ 'Five Below',
+    grepl("Top", store) ~ 'Top Dollar'))
+
+DC_DS_map <- ggplot() +
+  theme_economist() +
+  geom_sf(data = wards) +
+  geom_sf(data = DC_DS_grouped, aes(color = seller)) +
+  geom_sf_label(data = wards, aes(label = NAME),
+                label.padding = unit(1, "mm")) +
+  labs(title = "D.C. 2021 Dollar Stores",
+       caption = "Map and data formed by Emma Kornberg")+
+  theme(legend.position="right") +
+  scale_color_discrete(drop = FALSE,
+                       name = 'Dollar Stores',
+                       breaks = c('Dollar Plus', 'Dollar 1',
+                                 'Dollar Tree', 'Dollar Star',
+                                 'Dollar & Beyond', 'Family Dollar', 
+                                 'Five Below', 'Top Dollar'),
+                       label = c('Dollar Plus', 'Dollar 1',
+                                 'Dollar Tree', 'Dollar Star',
+                                 'Dollar & Beyond', 'Family Dollar', 
+                                 'Five Below', 'Top Dollar')) +
+  theme(aspect.ratio = 5/5)
+```
+
+We now look to the dollar store lens of food access in D.C. with a map where we can see where all of the dollar stores are located in the city. Here, we quickly observe that there is not an abundance of dollar stores in the city, particularly not in wards 7 and 8. 
+
+```{r dollar stores map, warning = FALSE, message = FALSE, echo=FALSE}
+DC_DS_map
+```
+
+# Discussion
+
+The answer is not as simple as educating people as to what constitutes a well-balanced diet, nor as simple as putting fresh food in dollar stores or even opening up more full-service grocery stores in specific areas. While those solutions may help, they are at best a temporary patch holding together cracks from far larger issues. Time and time again has shown that variables such as physical access or education are not as serious obstacles as poverty. People are willing to travel for the foods they want and are capable of making independent decisions (Fielding-Singh 2021). The biggest barrier to maintaining a nutritious and whole diet for most people is about having the means to support that (Fielding-Singh 2021). While D.C.'s wards 7 and 8 deserve more convenient full-service grocers, they also deserve higher wages that actually support the standard of living in a metro area. Many initiatives have been taken, whether it be by First Lady Michelle Obama's federal health initiatives or D.C. Mayor Muriel Bowser's appointing of cabinet members to support development of the under-served areas of the city, but they only attempt to address the more surface-level symptoms of racial capitalism. Today's dollar stores in the D.C. area are likely not intentionally preying on low-income, low-access residents. Rather, they are most likely incentivized by profit and their operating locations reflect that (Chenarides, et al. 2021). They are more interested in making a profit than they are in anything else. Of course, this is not to say that they are morally good-actors that treat their employees across the board with fair compensation and benefits. 
+
+While dollar stores may have a vested interested in building monopolies in some areas, that does not seem to be the case for D.C., especially given that there are very few dollar stores in the area given the population. From the dollar store map, we can see that D.C. has sixteen dollar stores, while Tulsa has ten (King and Gonzalez 2019). Given that there is a much larger population in D.C. than there is in Tulsa, it can be said that D.C. does not have the same dollar store landscape as did Tulsa. Furthermore, we know that many popular dollar store chains are now moving to expand their target audiences and secure a loyal customer base. This is reflected in the recent increases in prices that many dollar stores have implemented recently. Many dollar stores are actively looking to secure wealthier and loyal customers (McCammon, et al. 2021). We need to move beyond Cold War thinking that prioritizes flashy abundance and actually supports the needs of the so-called common man. This is not to say that physical access to food sellers is not still an issue. However, this is a symptom of the larger issue, not the root. Ultimately, it is not only kinder and more productive to address the matters of food injustice at its core but it is also more cost-effective and time-efficient. Prevention is almost always a more constructive strategy than clean-up. Because the United States is built on inherent racial capitalism, structures such as the federal government, the D.C. government, and food retailers have a vested interest in choosing profit over people, particularly people of color. However, I argue that the pandemic has only further emphasized that a nation is only as protected as its least protected members. Even if it is for self-motivated reasons, providing care and support for marginalized peoples rises to benefit peoples of more power. Protection does not trickle down, rather it rises. Science writer Ed Yong succinctly captures the sentiment: "Normal led to this." That being said, we should care about others because we care about others. 
+
+# Conclusion
+
+Instead of undercutting community solutions like the free breakfast program pioneered by the Black Panther Party, we must invest in our people. Tax incentives for grocery store chains to open in under-served areas are a start but we must remember that they are not a complete solution. Community markets and gardens are effective ways to invest in our people. Like Tulsa, D.C. should make efforts to ease the obstacles of permitting for local residents to sell their food goods to one another, instead of deliberately creating obstacles to destroy them like they have in the past (Food for the People: Eating and Activism in Greater Washington 2021). All people deserve access to the foods that they want to eat and that make them feel good, regardless of any socially constructed differentiations. Food justice is a public health matter, as well as an environmental justice matter, and ultimately highlights the importance of us taking care of one another. 
+
+
+# Works Cited
+
+Chenarides, Lauren, Clare Cho, Rodolfo M. Nayga, and Michael R. Thomsen. “Dollar Stores and Food Deserts.” Applied Geography 134 (September 1, 2021): 102497. https://doi.org/10.1016/j.apgeog.2021.102497.
+
+D’Ignazio, Catherine, and Lauren F. Klein. Data Feminism | The MIT Press. MIT Press, 2020. https://mitpress.mit.edu/books/data-feminism.
+
+Fielding-Singh, Priya. How the Other Half Eats. Hachette Book Group, 2021. https://www.hachettebookgroup.com/titles/priya-fielding-singh-phd/how-the-other-half-eats/9780316427272/.
+
+Fishback, Price V., and Melissa A. Thomasson. “Food Programs – Participation, Benefits, Payments, and Costs: 1962–1999.” Historical Statistics of the United States, 2006.
+
+Fishback, Price V., and Melissa A. Thomasson. “Social Welfare: 1929 to the Present.” Cambridge University Press, 2006. https://doi.org/10.1017/ISBN-9780511132971.Bf.ESS.03.
+
+“Food Access Research Atlas.” United States Department of Agriculture Economic Research Service, 2019. https://www.ers.usda.gov/data-products/food-access-research-atlas/download-the-data/.
+
+“Food for the People: Eating and Activism in Greater Washington.” Smithsonian Anacostia Community Museum, April 17, 2021. https://anacostia.si.edu/Exhibitions/Details/Food-for-the-People-Eating-and-Activism-in-Greater-Washington-6536.
+
+Giammona, Craig. “Dollar Stores Hammered by Trump Proposal to Abandon Food Stamps - Bloomberg.” Bloomberg, 2018. https://www.bloomberg.com/news/articles/2018-02-12/dollar-stores-hammered-by-trump-proposal-to-abandon-food-stamps.
+
+Haines, Michael R., and Sumner La Croix. “Population – United States and Outlying Areas: 1880–1990.” Historical Statistics of the United States, 2006.
+
+“Index of /Geo/Tiger/TIGER2021/TRACT.” United States Census Bureau, 2021. https://www2.census.gov/geo/tiger/TIGER2021/TRACT/.
+
+King, Noel, and Sarah Gonzalez. “Episode 909: Dollar Stores Vs. Lettuce : Planet Money : NPR.” Accessed October 1, 2021. https://www.npr.org/sections/money/2019/04/26/717665452/episode-909-dollar-stores-vs-lettuce.
+
+Leigh Goffe, Tao, and Austin Baik. “Racial Contagion, Racial Enclosure: Yellow Peril and Black Life.” August 13, 2020. https://www.youtube.com/watch?t=1928s&v=HfxuJfbKo2M.
+
+Lo Wang, Hansi, Gene Demby, Alyssa Jeong Perry, and Leah Donnella. “Painting By Numbers.” Code Switch, n.d. https://www.npr.org/2021/09/29/1041510105/painting-by-numbers.
+
+McCammon, Sarah, Vincent Acovino, and Amy Isackson. “Dollar Stores Have Boomed during the Pandemic, Which Concerns Some Communities.” NPR, October 19, 2021. https://www.npr.org/2021/10/19/1047400915/dollar-stores-have-boomed-during-the-pandemic-which-concerns-some-communities.
+
+Newsome Bass, Bree. “I Still Think People Largely Underappreciate....” Tweet. @BreeNewsome (blog), December 15, 2021. https://twitter.com/BreeNewsome/status/1471133679766360076.
+
+“Open Data DC.” City of Washington, D.C., September 2, 2021. https://opendata.dc.gov/search?collection=Dataset.
+
+“Poster-Size Census Tracts Wards, November 2010.” D.C. Office of Planning, November 14, 2010. https://planning.dc.gov/publication/poster-size-census-tracts-wards-november-2010.
+
+Schwartzman, Paul. “D.C.’s Grocery Gap Reflects City’s Income Divide.” Washington Post, June 1, 2017, sec. D.C. Politics. https://www.washingtonpost.com/local/dc-politics/dcs-grocery-gap-reflects-citys-income-divide/2017/06/01/874f0870-4627-11e7-bcde-624ad94170ab_story.html.
+
+Staff, A. O. L. “Rich Mom, Poor Mom: How a Parent’s Income Affects a Child’s Diet,” December 15, 2021. https://www.aol.com/rich-mom-poor-mom-parents-151131270.html.
+
+United Nations. “Universal Declaration of Human Rights.” United Nations. United Nations, 1948. https://www.un.org/en/about-us/universal-declaration-of-human-rights.
+
+USDA Food and Nutrition Service. “Where Can I Use SNAP EBT?,” 2021. https://www.fns.usda.gov/snap/retailer-locator.
+
+Vanek Smith, Stacey, and Cardiff Garcia. “A Tale Of Two Dollar Stores.” The Indicator from Planet Money, n.d.
+
+Wilson Gilmore, Ruth. “Racial Capitalism Symposium Presenter Abstracts.” University of Illinois at Urbana Champaign Unit for Criticism and Interpretive Theory. Accessed December 17, 2020. https://criticism.english.illinois.edu/racial-capitalism/racial-capitalism-symposium-presenter-abstracts.
+
+# Appendix
+
+The appendix includes the notable and functional code I wrote to produce the graphics for this project. This section does not encompass the entirety of the code I wrote for this project.
+
+## Historical Data
+
+```{r Historical Statistics app, warning = FALSE, message = FALSE, eval = FALSE}
+#1890-1995 Food programs-participation, benefits, payments, and costs: 1962-1999 -- import data into RStudio (Historical Statistics Database)
+snap <- read_excel("C:\\Users\\ekorn\\Documents\\AMS 412\\SNAP.xlsx")
+wic <- read_excel("C:\\Users\\ekorn\\Documents\\AMS 412\\WIC.xlsx")
+school <- read_excel("C:\\Users\\ekorn\\Documents\\AMS 412\\School_Food.xlsx")
+#Population - United States and outlying areas: 1880-1990 -- import data into RStudio (Historical Statistics Database)
+population <- read_excel("C:\\Users\\ekorn\\Documents\\AMS 412\\population.xlsx")
+
+#Plots
+Food_stamp_participants <- ggplot() +
+  theme_economist() +
+  geom_col(data = snap, aes(x = Year, y = People)) +
+  labs(title = "Food Stamp Program",
+      subtitle = "Average Number of Participants",
+       y = "Number of people (in thousands)",
+       caption = "Graph created by Emma Kornberg;
+       data from Historical Statistics of the United States (Fishback & Thomasson 2006)") +
+  scale_x_discrete(breaks = c(1962, 1970, 1980, 1990, 1998),
+                   labels = c("1962", "1970", "1980", "1990", "1998"))
+
+population_table <- kable(population, caption = "U.S. Total Population from 1960-1990,
+                          data from Historical Statistics of the United States 
+                          (Haines & La Croix 2006)")
+
+Annual_food_stamp_benefits <- ggplot() +
+  theme_economist() +
+  geom_col(data = snap, aes(x = Year, y = Annual)) +
+  labs(title = "Food Stamp Program",
+      subtitle = "Annual average monthly benefit per person",
+       y = "Benefits received (in dollars)",
+       caption = "Graph created by Emma Kornberg;
+       data from Historical Statistics of the United States (Fishback & Thomasson 2006))") +
+  scale_x_discrete(breaks = c(1962, 1970, 1980, 1990, 1998),
+                   labels = c("1962", "1970", "1980", "1990", "1998")) +
+  scale_y_continuous(breaks = c(0.0e+00, 5.0e+06, 1.0e+07, 1.5e+07, 2.0e+07),
+                     labels = c("0", "5m", "10m", "15m", "20m"))
+
+fed_cost_school <- school %>%
+  select(Year, Cost) %>%
+  slice(1:31)
+
+breakfast <- school %>%
+  select(Year, Students, Meals, Percentage) %>%
+  slice(63:93)
+
+fed_cost_graph <- ggplot() +
+  theme_economist() +
+  geom_col(data = fed_cost_school, aes(x = Year, y = Cost)) +
+  labs(y = "Cost",
+       title = "Federal cost of school food programs",
+       subtitle = "Total Costs (in millions of dollars)",
+       caption = "Graph created by Emma Kornberg;
+       data from Historical Statistics of the United States (Fishback & Thomasson 2006)") +
+  scale_x_discrete(breaks = c(1969, 1980, 1990, 1999),
+                   labels = c("1969", "1980", "1990", "1999"))
+
+bf_student_num <- ggplot() +
+  theme_economist() +
+  geom_col(data = breakfast, aes(x = Year, y = Students)) +
+  labs(y = "Participants",
+       title = "School Breakfast Program",
+       subtitle = "Total monthly participation (in millions)",
+       caption = "Graph created by Emma Kornberg;
+       data from Historical Statistics of the United States (Fishback & Thomasson 2006)") +
+  scale_x_discrete(breaks = c(1969, 1980, 1990, 1999),
+                   labels = c("1969", "1980", "1990", "1999"))
+
+bf_meals <- ggplot() +
+  theme_economist() +
+  geom_col(data = breakfast, aes(x = Year, y = Meals)) +
+  labs(y = "Meals",
+       title = "School Breakfast Program",
+       subtitle = "Meals served (in millions)",
+       caption = "Graph created by Emma Kornberg;
+       data from Historical Statistics of the United States (Fishback & Thomasson 2006)") +
+  scale_x_discrete(breaks = c(1969, 1980, 1990, 1999),
+                   labels = c("1969", "1980", "1990", "1999"))
+```
+
+## USDA Food Access Atlas
+```{r App USDAFoodAccessAtlas, warning=FALSE, message=FALSE, eval = FALSE}
+#2019 USDA FOOD ACCESS ATLAS
+#--import data into RStudio
+FoodAccess_2019 <- read_excel("C:\\Users\\ekorn\\Documents\\AMS 412\\FoodAccess_2019.xlsx")
+
+#LI = Low income, LA = low access
+#commented/excluded variables are majority null/redundant
+#starred comments are labels
+DC_FA_19 <- FoodAccess_2019 %>%
+  mutate(TractPOC = TractBlack + TractAsian +
+           TractNHOPI + TractAIAN + TractOMultir +
+           TractHispanic) %>%
+  select(CensusTract, Pop2010,
+         #**LILA tracts measured at 1 mi and 1/2 mi**
+         LILATracts_1And10, LILATracts_halfAnd10,
+         #**LILA tracts using vehicle access
+         #or LILA tract measured at 20 mi;
+         #Vehicle access, tract with low vehicle access**
+         LILATracts_Vehicle, HUNVFlag,
+         #**LI tract; tract poverty rate**
+         LowIncomeTracts, PovertyRate,
+         #**Tract median family income**
+         MedianFamilyIncome,
+         #**LA tracts measured at 1/2, 1, 10, and 20 mi**
+         LATracts_half, LATracts1, LATracts10, LATracts20,
+         #**LA tract using vehicle access**
+         LATractsVehicle_20,
+         #**LA population at 1/2, 10, and 20 mi,
+         #number + share**
+         lapophalf, lapophalfshare, 
+         #lapop10, lapop10share, lapop20, lapop20share,
+         #**LILA population at 1/2, 10, and 20 mi,
+         #number + share**
+         lalowihalf, lalowihalfshare, 
+         #lalowi10, lalowi10share, lalowi20, lalowi20share,
+         #**Tract low-income population, number**
+         TractLOWI,
+         #**LA, children ages 0-17 at 
+         #1/2, 1, 10, and 20 mi, number + share**
+         lakidshalf, lakidshalfshare,
+         #lakids1, lakids1share, lakids10, lakids10share,
+         #lakids20, lakids20share,
+         #**Tract children age 0-17, number**
+         TractKids,
+         #**LA, seniors age 65+ at
+         #1/2, 1, 10, and 20 mi, number + share**
+         laseniorshalf, laseniorshalfshare,
+         #laseniors1, laseniors1share, laseniors10,
+         #laseniors10share, laseniors20, laseniors20share,
+         #**Tract seniors age 65+, number**
+         TractSeniors,
+         #**LA, White population at
+         #1/2, 1, 10, and 20 mi, number + share**
+         lawhitehalf, lawhitehalfshare,
+         #lawhite1, lawhite1share, lawhite10, lawhite10share,
+         #lawhite20, lawhite20share,
+         #**Tract White population, number**
+         TractWhite,
+         #**LA, Black or African American population
+         #at 1/2, 1, 10, and 20 mi, number + share**
+         lablackhalf, lablackhalfshare,
+         #lablack1, lablack1share, lablack10, lablack10share,
+         #lablack20, lablack20share,
+         #**Tract Black or African American population, number**
+         TractBlack,
+         #**LA, Asian population at 1/2, 1, 10, and 20 mi,
+         #number + share**
+         laasianhalf, laasianhalfshare,
+         #laasian1, laasian1share, laasian10, laasian10share,
+         #laasian20, laasian20share,
+         #Tract Asian population, number
+         TractAsian,
+         #**LA, Native Hawaiian or Other
+         #Pacific Islander population**
+         #at 1/2, 1, 10, and 20 mi, number + share
+         lanhopihalf, lanhopihalfshare,
+         #lanhopi1, lanhopi1share, lahopi10share,
+         #lahopi20, lahopi20share,
+         #**Tract Native Hawaiian and
+         #Other Pacific Islander population, number**
+         TractNHOPI,
+         #**LA, American Indian or Alaska Native population at
+         #1/2, 1, 10, and 20 mi, number + share**
+         laaianhalf, laaianhalfshare,
+         #laaian1, laaian1share, laaian10, laaian10share,
+         #laaian20, laaian20share,
+         #**Tract American Indian and 
+         #Alaska Native population, number**
+         TractAIAN,
+         #LA, Other/Multiple race population
+         #at 1/2, 1, 10, and 20 mi, number + share**
+         laomultirhalf, laomultirhalfshare,
+         #laomultir1, laomultir1share, laomultir10,
+         #laomultir10share, laomultir20, laomultir20share,
+         #**Tract Other/Multiple race population, number**
+         TractOMultir,
+         #**LA, Hispanic or Latino population at
+         #1/2, 1, 10, and 20 mi, number + share**
+         lahisphalf, lahisphalfshare,
+         #lahisp1, lahisp1share, lahisp10, lahisp10share,
+         #lahisp20, lahisp20share,
+         #**Tract Hispanic or Latino population, number**
+         TractHispanic,
+         #**Vehicle access, housing units without
+         #and LA at 1/2, 1, 10, and 20 mi, number + share**
+         lahunvhalf, lahunvhalfshare,
+         #lahunv1, lahunv1share, lahunv10, lahunv10share,
+         #lahunv20, lahunv20share,
+         #**Tract housing units without a vehicle, number**
+         TractHUNV,
+         #**LA, housing units receiving
+         #SNAP benefits at 1/2, 1, 10, and 20 mi,
+         #number + share**
+         lasnaphalf, lasnaphalfshare,
+         #lasnap1, lasnap1share, lasnap10, lasnap10share, lasnap20,
+         #lasnap20share,
+         #**Tract housing units receiving SNAP benefits, number**
+         TractSNAP,
+         #**LA, population at 1 mi, number + share**
+         #lapop1, lapop1share,
+         #**LILA population at 1 mi, number + share**
+         #lalowi1, lalowi1share
+         TractPOC)
+```
+
+## Map Shapefiles
+```{r app maps, warning=FALSE, message=FALSE, eval = FALSE}
+#DC CENSUS TRACT MAP
+tract <- fs::path("C:\\Users\\ekorn\\Documents\\AMS 412\\tl_2021_11_tract")
+#st_layers(tract)
+DC_tract <- st_read(tract,
+                    layer = "tl_2021_11_tract")
+
+#DC WARD MAP
+DC_wards <- fs::path("C:\\Users\\ekorn\\Documents\\AMS 412\\Wards_from_2012_with_Census_2020\\Wards_from_2012_with_Census_2020.shp")
+#st_layers(DC_wards)
+wards <- st_read(DC_wards,
+                 layer = "Wards_from_2012_with_Census_2020")
+
+#SNAP21
+snap_stores <- fs::path("C:\\Users\\ekorn\\Documents\\AMS 412\\SNAP_Store_Locations\\Store_Locations.shp")
+#st_layers(snap_stores)
+snap_stores <- st_read(snap_stores,
+                       layer = "Store_Locations")
+
+#DC 2021 DOLLAR STORES MAP
+#Excel file of DC dollar store coordinates:
+DC_Dollar_Stores_2021 <- read_excel("C:\\Users\\ekorn\\Documents\\AMS 412\\DC_Dollar_Stores.xlsx")
+DC_Dollar_Stores_2021 <- fs::path("C:\\Users\\ekorn\\Documents\\AMS 412\\DC DS ArcGIS\\T_2021_DC_DS__XYTableToPoint1.shp")
+#st_layers(DC_Dollar_Stores_2021)
+DC_DS <- st_read(DC_Dollar_Stores_2021,
+                 layer = "T_2021_DC_DS__XYTableToPoint1")
+```
+
+## USDA maps
+```{r app USDA maps, warning=FALSE, message = FALSE, fig.width = 20, eval = FALSE}
+#join USDA Food Access Atlas with Census Tract Map for visualizations
+tracts_data <- DC_tract %>% 
+  full_join(DC_FA_19, by = c("GEOID" = "CensusTract")) 
+
+#Population
+pop2010_map <- ggplot() +
+  theme_economist() +
+  scale_fill_distiller(palette = "Blues",
+                       direction = 1) +
+  geom_sf(data = tracts_data, aes(fill = Pop2010)) +
+  labs(title = "D.C. Population",
+       subtitle = "by 2010 census tracts",
+       caption = "Graph created by Emma Kornberg;
+       data from USDA (“Food Access Research Atlas.”)") +
+  theme(legend.key.size = unit(1, 'cm')) +
+  geom_sf_label(data = wards, aes(label = NAME),
+                label.padding = unit(1, "mm"))
+
+#Poverty Rate
+pov_rate_map <- ggplot() +
+  theme_economist() +
+  scale_fill_distiller(palette = "Blues",
+                       direction = 1) +
+  geom_sf(data = tracts_data, aes(fill = PovertyRate)) +
+  labs(title = "D.C. Poverty Rate",
+       subtitle = "by 2010 census tracts",
+       caption = "Graph created by Emma Kornberg;
+       data from USDA (“Food Access Research Atlas.”)") +
+  theme(legend.key.size = unit(1, 'cm')) +
+  geom_sf_label(data = wards, aes(label = NAME),
+                label.padding = unit(1, "mm"))
+
+#White by tract
+white_tract_map <- ggplot() +
+  theme_economist() +
+  scale_fill_distiller(palette = "Blues",
+                       direction = 1) +
+  geom_sf(data = tracts_data, aes(fill = TractWhite)) +
+  labs(title = "D.C. white Population",
+       subtitle = "by 2010 census tracts",
+       caption = "Graph created by Emma Kornberg;
+       data from USDA (“Food Access Research Atlas.”)") +
+  theme(legend.key.size = unit(1.5, 'cm')) +
+  geom_sf_label(data = wards, aes(label = NAME),
+                label.padding = unit(1, "mm"))
+
+#POC by tract
+poc_tract_map <- ggplot() +
+  theme_economist() +
+  scale_fill_distiller(palette = "Blues",
+                       direction = 1) +
+  geom_sf(data = tracts_data, aes(fill = TractPOC)) +
+  labs(title = "D.C. POC Population",
+       subtitle = "by 2010 census tracts",
+       caption = "Graph created by Emma Kornberg;
+       data from USDA (“Food Access Research Atlas.”)") +
+  theme(legend.key.size = unit(1.5, 'cm')) +
+  geom_sf_label(data = wards, aes(label = NAME),
+                label.padding = unit(1, "mm"))
+
+#Black by tract
+black_tract_map <- ggplot() +
+  theme_economist() +
+  scale_fill_distiller(palette = "Blues",
+                       direction = 1) +
+  geom_sf(data = tracts_data, aes(fill = TractBlack)) +
+  labs(title = "D.C. Black Population",
+       subtitle = "by 2010 census tracts",
+       caption = "Graph created by Emma Kornberg;
+       data from USDA (“Food Access Research Atlas.”)") +
+  theme(legend.key.size = unit(1.5, 'cm')) +
+  geom_sf_label(data = wards, aes(label = NAME),
+                label.padding = unit(1, "mm"))
+
+#SNAP
+snap_map <- ggplot() +
+  theme_economist() +
+  scale_fill_distiller(palette = "Blues",
+                       direction = 1) +
+  geom_sf(data = tracts_data, aes(fill = TractSNAP)) +
+  labs(title = "D.C. Housing Units with SNAP Benefits",
+       subtitle = "from 2019 Store Tracking and Redemption System
+       STARS) store directory; organized by 2010 census tracts",
+       caption = "Graph created by Emma Kornberg;
+       data from USDA (“Food Access Research Atlas.”)") +
+  theme(legend.key.size = unit(1.5, 'cm')) +
+  geom_sf_label(data = wards, aes(label = NAME),
+                label.padding = unit(1, "mm"))
+
+#LI
+li_map <- ggplot() +
+  theme_economist() +
+  scale_fill_distiller(palette = "Blues",
+                       direction = 1) +
+  geom_sf(data = tracts_data, aes(fill = LowIncomeTracts)) +
+  labs(title = "Flag for Low-Income Tracts in D.C.",
+       subtitle = "from the Department of Treasury’s
+       New Markets Tax Credit (NMTC) program;
+      organized by 2010 census tracts",
+       caption = "Graph created by Emma Kornberg;
+       data from USDA (“Food Access Research Atlas.”)") +
+  theme(legend.key.size = unit(1.5, 'cm')) +
+  geom_sf_label(data = wards, aes(label = NAME),
+                label.padding = unit(1, "mm")) +
+  theme(legend.position = "none")
+
+#LA
+la_map <- ggplot() +
+  theme_economist() +
+  scale_fill_distiller(palette = "Blues",
+                       direction = 1) +
+  geom_sf(data = tracts_data, aes(fill = LATracts_half)) +
+  labs(title = "Flag for Low-Access Tracts in D.C.",
+       subtitle = "Many residents live 1/2 mi. + from the nearest supermarket;
+       from 2019 Store Tracking and Redemption System (STARS)
+       store directory of SNAP authorized sellers and
+       2019 Trade Dimensions TDLinx store directory",
+       caption = "Graph created by Emma Kornberg;
+       data from USDA (“Food Access Research Atlas.”)") +
+  theme(legend.key.size = unit(1.5, 'cm')) +
+  geom_sf_label(data = wards, aes(label = NAME),
+                label.padding = unit(1, "mm")) +
+  theme(legend.position = "none")
+
+#LILA tracts measured at 1/2 mi
+
+lila_map <- ggplot() +
+  theme_economist() +
+  scale_fill_distiller(palette = "Blues",
+                       direction = 1) +
+  geom_sf(data = tracts_data, aes(fill = LILATracts_halfAnd10)) +
+  labs(title = "Flag for Low-Income, Low-Access Tracts in D.C.", 
+       subtitle = " when considering low accessibilty at 1/2 mi; 
+       from 2019 Store Tracking and Redemption System (STARS)
+       store directory of SNAP authorized sellers and
+       2019 Trade Dimensions TDLinx store directory",
+       caption = "Graph created by Emma Kornberg;
+       data from USDA (“Food Access Research Atlas.”)") +
+  theme(legend.key.size = unit(1, 'cm')) +
+  geom_sf_label(data = wards, aes(label = NAME),
+                label.padding = unit(1, "mm")) +
+  theme(legend.position = "none")
+
+#SNAP Locations
+SNAP_store_map <- ggplot() +
+  theme_economist() +
+  geom_sf(data = wards) +
+  geom_sf(data = snap_stores) +
+  labs(title = "SNAP Store Locations in D.C. in 2021", 
+       caption = "Graph created by Emma Kornberg;
+       data from USDA (“Where Can I Use SNAP EBT?.”)") +
+  theme(legend.key.size = unit(1, 'cm')) +
+  geom_sf_label(data = wards, aes(label = NAME),
+                label.padding = unit(1, "mm")) +
+  theme(legend.position = "none")
+```
+
+## SNAP Sellers Maps
+
+```{r app snap sellers, warning = FALSE, message = FALSE, eval = FALSE, fig.width = 20}
+snap_stores %>%
+  arrange(Store_Name)
+
+snap_pop_sellers <- snap_stores %>%
+  mutate(seller = case_when(
+    grepl("CVS", Store_Name) ~ 'CVS',
+    grepl("eleven", Store_Name) ~ 'SevenEleven',
+    grepl("Giant", Store_Name) ~ 'Giant',
+    grepl("Safeway", Store_Name) ~ 'Safeway',
+    grepl("Trader", Store_Name) ~ 'TraderJoes',
+    grepl("Harris", Store_Name) ~ 'HarrisTeeter',
+    grepl("Wawa", Store_Name) ~ 'Wawa',
+    grepl("Dollar", Store_Name) ~ 'AllDollarStores',
+    grepl("Walmart", Store_Name) ~ 'Walmart',
+    grepl("Walgreens", Store_Name) ~ 'Walgreens',
+    grepl("Yes", Store_Name) ~ 'YesOrganicMarket'))
+
+snap_pop_sellers %>%
+  filter(!is.na(seller))
+
+ggplot() +
+  theme_economist() +
+  geom_sf(data = wards) +
+  geom_sf(data = snap_pop_sellers, aes(color = seller)) +
+  labs(title = "Popular 2021 SNAP-Authorized Food Sellers in D.C.",
+       caption = "Graph created by Emma Kornberg;
+       data from USDA") +
+  theme(legend.position="bottom") +
+  geom_sf_label(data = wards, aes(label = NAME),
+                label.padding = unit(1, "mm")) +
+  scale_color_discrete(drop = FALSE,
+                       name = 'Popular Stores',
+                       label = c('All Dollar Stores', 'CVS',
+                              'Giant', 'Harris Teeter',
+                              'Safeway', '7/11', 
+                              'Trader Joes', 'Walgreens',
+                              'Walmart', 'Wawa',
+                              'Yes Organic Market', 'Other Stores'))
+```
+
+## Dollar Stores Maps
+
+```{r app dollar stores, warning = FALSE, message = FALSE, eval = FALSE, fig.width = 15}
+DC_DS_grouped <- DC_DS %>%
+  mutate(seller = case_when(
+    grepl("Plus", store) ~ 'Dollar Plus',
+    grepl("1", store) ~ 'Dollar 1',
+    grepl("Tree", store) ~ 'Dollar Tree',
+    grepl("Star", store) ~ 'Dollar Star',
+    grepl("Beyond", store) ~ 'Dollar & Beyond',
+    grepl("Family", store) ~ 'Family Dollar',
+    grepl("Five", store) ~ 'Five Below',
+    grepl("Top", store) ~ 'Top Dollar'))
+
+ggplot() +
+  theme_economist() +
+  geom_sf(data = wards) +
+  geom_sf(data = DC_DS_grouped, aes(color = seller)) +
+  geom_sf_label(data = wards, aes(label = NAME),
+                label.padding = unit(1, "mm")) +
+  labs(title = "D.C. 2021 Dollar Stores",
+       caption = "Graph and data formed by Emma Kornberg") +
+  theme(legend.position="bottom")
+```
